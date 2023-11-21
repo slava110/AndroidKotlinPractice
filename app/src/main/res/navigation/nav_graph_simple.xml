@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph_simple"
+            app:startDestination="@id/simpleFragmentFirst">
+
+    <fragment android:id="@+id/simpleFragmentFirst"
+              android:name="com.slava_110.androidkotlinpractice.tasks.fragments.navgraph.SimpleFragmentFirstNG"
+              android:label="fragment_simple_first">
+        <action android:id="@+id/action_simpleFragmentFirst_to_simpleFragmentSecond"
+                app:destination="@id/simpleFragmentSecond"/>
+    </fragment>
+    <fragment android:id="@+id/simpleFragmentSecond"
+              android:name="com.slava_110.androidkotlinpractice.tasks.fragments.navgraph.SimpleFragmentSecondNG"
+              android:label="fragment_simple_second">
+        <action android:id="@+id/action_simpleFragmentSecond_to_simpleFragmentFirst"
+                app:destination="@id/simpleFragmentFirst"/>
+    </fragment>
+</navigation>

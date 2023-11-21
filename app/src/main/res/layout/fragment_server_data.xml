@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".tasks.serverdata.ui.ServerDataFragment"
+        android:id="@+id/fragment_server_data">
+
+    <Button
+            android:text="Update"
+            android:layout_width="110dp"
+            android:layout_height="61dp" android:id="@+id/button"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.5"/>
+    <TextView
+            android:text="Update me!"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            android:textSize="34sp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toTopOf="@+id/button"/>
+    <Button
+            android:text="Back"
+            android:layout_width="108dp"
+            android:layout_height="61dp" android:id="@+id/backButton4"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="Saved"
+            android:layout_width="109dp"
+            android:layout_height="63dp" android:id="@+id/buttonDbList"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/backButton4"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
