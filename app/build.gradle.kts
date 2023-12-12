@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.slava_110.androidkotlinpractice"
+    namespace = "com.dolgov.androidkotlinpractice"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.slava_110.androidkotlinpractice"
+        applicationId = "com.dolgov.androidkotlinpractice"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
