@@ -1,4 +1,4 @@
-package com.slava_110.androidkotlinpractice.tasks.imageshow.repository.worker
+package com.slava_110.androidkotlinpractice.tasks.imageshow.model.worker
 
 import android.content.Context
 import android.util.Log
@@ -6,7 +6,7 @@ import androidx.core.net.toUri
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import com.slava_110.androidkotlinpractice.tasks.imageshow.repository.ImageShowDispatchers
+import com.slava_110.androidkotlinpractice.tasks.imageshow.model.ImageShowDispatchers
 import io.ktor.client.*
 import io.ktor.client.plugins.*
 import io.ktor.client.request.*
@@ -14,7 +14,6 @@ import io.ktor.client.statement.*
 import io.ktor.http.*
 import io.ktor.util.cio.*
 import io.ktor.utils.io.*
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject

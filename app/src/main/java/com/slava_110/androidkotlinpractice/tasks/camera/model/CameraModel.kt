@@ -1,4 +1,4 @@
-package com.slava_110.androidkotlinpractice.tasks.camera.repository
+package com.slava_110.androidkotlinpractice.tasks.camera.model
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -6,7 +6,7 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
-class CameraRepository(filesDir: File) {
+class CameraModel(filesDir: File) {
     private val photosDir = filesDir.resolve("photos")
     private val datesFile = filesDir.resolve("dates.txt")
 
@@ -19,7 +19,10 @@ class CameraRepository(filesDir: File) {
 
     suspend fun getDates(): List<String> =
         withContext(Dispatchers.IO) {
-            datesFile.readLines()
+            if(datesFile.exists())
+                datesFile.readLines()
+            else
+                emptyList()
         }
 
     companion object {

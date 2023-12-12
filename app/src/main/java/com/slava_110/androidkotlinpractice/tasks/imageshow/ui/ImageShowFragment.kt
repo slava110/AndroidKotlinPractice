@@ -24,8 +24,8 @@ class ImageShowFragment : Fragment(R.layout.fragment_image_show) {
         }
 
         lifecycleScope.launch {
-            viewModel.imageState.collectLatest {
-                when(it) {
+            viewModel.imageState.collectLatest { state ->
+                when(state) {
                     ImageShowState.Default -> {
                         viewBinding.imageView.setImageResource(R.drawable.question_mark)
                     }
@@ -33,7 +33,7 @@ class ImageShowFragment : Fragment(R.layout.fragment_image_show) {
                         viewBinding.imageView.setImageResource(R.drawable.question_mark)
                     }
                     is ImageShowState.Complete -> {
-                        viewBinding.imageView.setImageURI(Uri.parse(it.outputImageUri))
+                        viewBinding.imageView.setImageURI(Uri.parse(state.outputImageUri))
                     }
                     is ImageShowState.Errored -> {
                         viewBinding.imageView.setImageResource(R.drawable.question_mark)

@@ -3,17 +3,17 @@ package com.slava_110.androidkotlinpractice.tasks.imageshow.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.work.WorkInfo
-import com.slava_110.androidkotlinpractice.tasks.imageshow.repository.ImageShowRepository
+import com.slava_110.androidkotlinpractice.tasks.imageshow.model.ImageShowModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 
 class ImageShowViewModel(
-    private val repository: ImageShowRepository
+    private val model: ImageShowModel
 ): ViewModel() {
     val imageState: StateFlow<ImageShowState> =
-        repository.outputWorkInfo.map {
+        model.outputWorkInfo.map {
             when(it.state) {
                 WorkInfo.State.RUNNING -> {
                     ImageShowState.Loading(
@@ -40,11 +40,7 @@ class ImageShowViewModel(
         )
 
     fun downloadImage(url: String) {
-        repository.downloadImage(url)
-    }
-
-    fun cancelDownloading() {
-        repository.cancelDownloading()
+        model.downloadImage(url)
     }
 }
 

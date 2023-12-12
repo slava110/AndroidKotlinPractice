@@ -19,7 +19,9 @@ class ComposeMainFragment: Fragment() {
         setContent {
             KoinContext {
                 AndroidKotlinPracticeTheme {
-                    AppMainComposeScreen()
+                    AppMainComposeScreen(
+                        onExit = { parentFragmentManager.popBackStack() }
+                    )
                 }
             }
         }

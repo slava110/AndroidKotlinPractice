@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndroidKotlinPractice</string>
+    <string name="back">Назад</string>
+    <string name="take_photo">Фото</string>
+    <string name="library">Библиотека</string>
+    <string name="update">Обновить</string>
+    <string name="update_me">Обнови меня!</string>
+    <string name="saved">Сохранено</string>
+    <string name="first_simple">Первый экран</string>
+    <string name="second">Второй</string>
+    <string name="second_simple">Второй экран</string>
+    <string name="first">Первый</string>
+    <string name="set">Установить</string>
+    <string name="url">Ссылка</string>
+    <string name="image">Изображение</string>
+</resources>

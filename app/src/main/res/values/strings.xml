@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">AndroidKotlinPractice</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="back">Back</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="library">Library</string>
+    <string name="update">Update</string>
+    <string name="update_me">Update me!</string>
+    <string name="saved">Saved</string>
+    <string name="first_simple">First Simple</string>
+    <string name="second">Second</string>
+    <string name="second_simple">Second Simple</string>
+    <string name="first">First</string>
+    <string name="default_image_show_image" translatable="false">https://kotlinlang.org/docs/images/kotlin-logo.png</string>
+    <string name="set">Set</string>
+    <string name="url">Url</string>
+    <string name="image">Image</string>
 </resources>

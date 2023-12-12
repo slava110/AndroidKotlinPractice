@@ -1,4 +1,4 @@
-package com.slava_110.androidkotlinpractice.tasks.imageshow.repository
+package com.slava_110.androidkotlinpractice.tasks.imageshow.model
 
 import kotlinx.coroutines.asCoroutineDispatcher
 import java.util.concurrent.Executors

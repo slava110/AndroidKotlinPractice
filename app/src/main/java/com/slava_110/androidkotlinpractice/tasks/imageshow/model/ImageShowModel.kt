@@ -1,14 +1,14 @@
-package com.slava_110.androidkotlinpractice.tasks.imageshow.repository
+package com.slava_110.androidkotlinpractice.tasks.imageshow.model
 
 import androidx.lifecycle.asFlow
 import androidx.work.*
-import com.slava_110.androidkotlinpractice.tasks.imageshow.repository.worker.DownloadImageWorker
+import com.slava_110.androidkotlinpractice.tasks.imageshow.model.worker.DownloadImageWorker
 import kotlinx.coroutines.flow.Flow
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import java.util.*
 
-class ImageShowRepository: KoinComponent {
+class ImageShowModel: KoinComponent {
     private val workManager by inject<WorkManager>()
 
     val outputWorkInfo: Flow<WorkInfo> =
@@ -33,10 +33,6 @@ class ImageShowRepository: KoinComponent {
                 setId(outputTaskId)
             }.build()
         )
-    }
-
-    fun cancelDownloading() {
-        workManager.cancelWorkById(outputTaskId)
     }
 
     companion object {

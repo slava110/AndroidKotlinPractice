@@ -23,11 +23,6 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
     private val cameraViewModel by viewModel<CameraViewModel>()
     private lateinit var camera: android.hardware.Camera
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         if(checkCameraPermission()) {
             initCamera()
@@ -36,6 +31,7 @@ class CameraFragment : Fragment(R.layout.fragment_camera) {
         viewBinding.butPhoto.setOnClickListener {
             camera.takePicture(null, null) { pictureBytes, _ ->
                 cameraViewModel.saveImage(pictureBytes)
+                camera.startPreview()
             }
         }
 

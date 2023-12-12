@@ -15,12 +15,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.core.view.WindowCompat
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Color.DarkGray,
-    secondary = Color.Green,
-    tertiary = Color.Green
-)
-
 @Composable
 fun AndroidKotlinPracticeTheme(
     content: @Composable () -> Unit
@@ -43,7 +37,13 @@ fun AndroidKotlinPracticeTheme(
     )
 }
 
-val Typography = Typography(
+private val DarkColorScheme = darkColorScheme(
+    primary = Color.DarkGray,
+    secondary = Color.Green,
+    tertiary = Color.Green
+)
+
+private val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
