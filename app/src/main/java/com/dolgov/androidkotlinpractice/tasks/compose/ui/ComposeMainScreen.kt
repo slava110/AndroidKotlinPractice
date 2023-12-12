@@ -15,6 +15,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavGraphBuilder
@@ -22,6 +23,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.dolgov.androidkotlinpractice.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -32,51 +34,51 @@ data class NavigationItemModel(
     val navGraphFunc: NavGraphBuilder.() -> Unit
 )
 
-private val navigationItems = listOf(
-    NavigationItemModel(
-        route = "home",
-        displayText = "Home",
-        icon = Icons.Rounded.Warning
-    ) {
-        composable("home") {
-            Box(
-                modifier = Modifier.fillMaxSize()
-            ) {
-                Text(
-                    text = "Hello!",
-                    fontSize = 50.sp,
-                    modifier = Modifier
-                        .align(Alignment.Center)
-                )
-            }
-        }
-    },
-    NavigationItemModel(
-        route = "imageshow",
-        displayText = "Image Show",
-        icon = Icons.Rounded.Info
-    ) {
-        composable("imageshow") {
-            ComposeImageShow()
-        }
-    },
-    NavigationItemModel(
-        route = "name",
-        displayText = "My Name",
-        icon = Icons.Rounded.AccountBox
-    ) {
-        composable("name") {
-            Text(
-                text = "Popov Sviatoslav Mikhailovich, IKBO-26-21"
-            )
-        }
-    }
-)
-
 @Composable
 fun AppMainComposeScreen(
     onExit: () -> Unit = {}
 ) {
+    val navigationItems = listOf(
+        NavigationItemModel(
+            route = "home",
+            displayText = stringResource(R.string.home),
+            icon = Icons.Rounded.Warning
+        ) {
+            composable("home") {
+                Box(
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Text(
+                        text = stringResource(R.string.hello),
+                        fontSize = 50.sp,
+                        modifier = Modifier
+                            .align(Alignment.Center)
+                    )
+                }
+            }
+        },
+        NavigationItemModel(
+            route = "imageshow",
+            displayText = stringResource(R.string.image_show),
+            icon = Icons.Rounded.Info
+        ) {
+            composable("imageshow") {
+                ComposeImageShow()
+            }
+        },
+        NavigationItemModel(
+            route = "name",
+            displayText = stringResource(R.string.my_name),
+            icon = Icons.Rounded.AccountBox
+        ) {
+            composable("name") {
+                Text(
+                    text = stringResource(R.string.dev_name)
+                )
+            }
+        }
+    )
+
     val navController = rememberNavController()
     val scope = rememberCoroutineScope()
     val currentNavItemState = remember { mutableStateOf(navigationItems[0]) }

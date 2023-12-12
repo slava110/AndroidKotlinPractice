@@ -6,7 +6,7 @@
                                                    android:layout_height="match_parent">
 
     <Button
-            android:text="Navigation"
+            android:text="@string/navigation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/butNavigation"
             app:layout_constraintStart_toStartOf="parent"
@@ -14,28 +14,28 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.5"
             app:layout_constraintBottom_toTopOf="@+id/butCamera"/>
     <Button
-            android:text="Camera"
+            android:text="@string/camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/butCamera"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/butNavigation"
             app:layout_constraintVertical_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/butServerData"/>
     <Button
-            android:text="Server Data"
+            android:text="@string/server_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/butServerData"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/butCamera"
             app:layout_constraintVertical_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/butImageShow"/>
     <Button
-            android:text="Image Show"
+            android:text="@string/image_show"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/butImageShow"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/butServerData"
             app:layout_constraintVertical_bias="0.5" app:layout_constraintBottom_toTopOf="@+id/butCompose"/>
     <Button
-            android:text="Compose"
+            android:text="@string/compose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/butCompose"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"

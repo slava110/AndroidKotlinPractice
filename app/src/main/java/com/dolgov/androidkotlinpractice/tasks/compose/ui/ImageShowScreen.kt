@@ -20,9 +20,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toFile
+import com.dolgov.androidkotlinpractice.R
 import com.dolgov.androidkotlinpractice.tasks.imageshow.ui.ImageShowState
 import com.dolgov.androidkotlinpractice.tasks.imageshow.ui.ImageShowViewModel
 import org.koin.androidx.compose.koinViewModel
@@ -103,7 +105,7 @@ private fun ImageShowElements(
             },
             label = {
                 Text(
-                    text = "Url",
+                    text = stringResource(R.string.url),
                     fontSize = 20.sp
                 )
             },
@@ -116,7 +118,7 @@ private fun ImageShowElements(
             }
         ) {
             Text(
-                text = "Set",
+                text = stringResource(R.string.set),
                 fontSize = 20.sp
             )
         }

@@ -14,4 +14,13 @@
     <string name="set">Set</string>
     <string name="url">Url</string>
     <string name="image">Image</string>
+    <string name="dev_name">Dolgov Mikhail Dmitrievich, IKBO-12-21</string>
+    <string name="my_name">My Name</string>
+    <string name="image_show">Image Show</string>
+    <string name="hello">Hello!</string>
+    <string name="home">Home</string>
+    <string name="navigation">Navigation</string>
+    <string name="camera">Camera</string>
+    <string name="server_data">Server Data</string>
+    <string name="compose" translatable="false">Compose</string>
 </resources>

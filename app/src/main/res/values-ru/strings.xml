@@ -14,4 +14,12 @@
     <string name="set">Установить</string>
     <string name="url">Ссылка</string>
     <string name="image">Изображение</string>
+    <string name="dev_name">Долгов Михаил Дмитриевич, ИКБО-12-21</string>
+    <string name="my_name">Автор</string>
+    <string name="image_show">Изображение</string>
+    <string name="hello">Привет!</string>
+    <string name="home">Главная</string>
+    <string name="navigation">Навигация</string>
+    <string name="camera">Камера</string>
+    <string name="server_data">Серверные данные</string>
 </resources>
