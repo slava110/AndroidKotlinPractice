@@ -167,6 +167,7 @@ private fun DrawerNavigation(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun BottomBarNavigation(
     onExit: () -> Unit,

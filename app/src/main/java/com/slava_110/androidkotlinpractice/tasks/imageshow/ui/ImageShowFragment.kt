@@ -7,8 +7,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.slava_110.androidkotlinpractice.R
 import com.slava_110.androidkotlinpractice.databinding.FragmentImageShowBinding
-import com.slava_110.androidkotlinpractice.tasks.imageshow.ui.ImageShowState
-import com.slava_110.androidkotlinpractice.tasks.imageshow.ui.ImageShowViewModel
 import com.slava_110.androidkotlinpractice.util.viewBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
